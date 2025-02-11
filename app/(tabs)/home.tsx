@@ -4,6 +4,8 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { AnimatedScrollView } from 'react-native-reanimated/lib/typescript/component/ScrollView';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default function HomeScreen() {
   return (
@@ -40,7 +42,7 @@ export default function HomeScreen() {
           Tap the Explore tab to learn more about what's included in this starter app.
         </ThemedText>
       </ThemedView>
-      <ThemedView style={styles.stepContainer}>
+      <ScrollView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
         <ThemedText>
           When you're ready, run{' '}
@@ -49,7 +51,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-      </ThemedView>
+      </ScrollView>
     </ParallaxScrollView>
   );
 }
